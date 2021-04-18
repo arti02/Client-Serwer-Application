@@ -33,5 +33,24 @@ namespace WpfTest.Models
 			return t;
 
 		}
-	}
+		public override void ZmienTemperature(double a, double b)
+		{
+			a = temp;
+			while (a != b)
+			{
+				if(a < b)
+                {
+					temp += 0.2;
+				}
+                else
+                {
+					temp -= 0.2;
+				}
+			}
+		}
+        public override double ZwrocTemp()
+        {
+            return temp;
+        }
+    }
 }

@@ -9,5 +9,7 @@ namespace WpfTest.Models
 	{
 		
 		public abstract double StworzTemperature();
+		public abstract void ZmienTemperature(double a, double b);
+		public abstract double ZwrocTemp();
 	}
 }

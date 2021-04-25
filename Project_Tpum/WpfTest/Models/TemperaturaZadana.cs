@@ -11,6 +11,13 @@ namespace WpfTest.Models
 		{
 			throw new NotImplementedException();
 		}
-
+		public override void ZmienTemperature(double a, double b)
+        {
+			throw new NotImplementedException();
+		}
+		public override double ZwrocTemp()
+		{
+			return temp;
+		}
 	}
 }

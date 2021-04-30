@@ -5,24 +5,24 @@ using System.Text;
 
 namespace Logic
 {
-    public class ProcessTemperature : IProcessTemperature
+    internal class ProcessTemperature : AProcessTemperature
     {
 
-        List<IRoom> rooms;
+        List<ARoom> rooms;
 
         public ProcessTemperature()
         {
-            rooms = new List<IRoom>();
+            rooms = new List<ARoom>();
         }
 
-        public void addRoom(string roomName)
+        public override void addRoom(string roomName)
         {
-            rooms.Add(new Room(roomName));
+            rooms.Add(ARoom.createRoom(roomName));
         }
 
-        public double getRoomTemperature(string name)
+        public override double getRoomTemperature(string name)
         {
-            foreach (Room r in rooms)
+            foreach (ARoom r in rooms)
             {
 
                 if (r.getRoomName().Equals(name))
@@ -35,9 +35,9 @@ namespace Logic
             return 0;
         }
 
-        public void setGoalTemp(string roomName, double goalTemp)
+        public override void setGoalTemp(string roomName, double goalTemp)
         {
-            foreach (Room r in rooms)
+            foreach (ARoom r in rooms)
             {
 
                 if (r.getRoomName().Equals(roomName))

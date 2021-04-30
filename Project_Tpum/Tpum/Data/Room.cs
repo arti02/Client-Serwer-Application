@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Data
 {
-    public class Room : IRoom
+    internal class Room : ARoom
     {
         private double actualTemperature;
         private double goalTemperature;
@@ -22,24 +22,24 @@ namespace Data
             this.actualTemperature = generateActualTemp();
             this.goalTemperature = 0;
         }
-        public double getActualTemperature()
+        public override double getActualTemperature()
         {
             return actualTemperature;
         }
 
-        public string getRoomName()
+        public override string getRoomName()
         {
             simulateUpdateTemp();
             return roomName;
         }
 
-        public void setGoalTemperature(double temperature)
+        public override void  setGoalTemperature(double temperature)
         {
             goalTemperature = temperature;
             Console.WriteLine("GOAL TEMPERATURE**********" + goalTemperature);
         }
 
-        public void setRoomName(string name)
+        public override void setRoomName(string name)
         {
             roomName = name;
         }

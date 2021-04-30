@@ -9,11 +9,11 @@ namespace Prezentacja.Model
 {
     class TemperaturaModel
     {
-      ProcessTemperature processTemperature;
+      AProcessTemperature processTemperature;
 
         public TemperaturaModel()
         {
-            processTemperature = new ProcessTemperature();
+            processTemperature = AProcessTemperature.createProcessTemperature();
         }
 
         public void initData()

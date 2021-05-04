@@ -18,5 +18,24 @@ namespace LogicUnitTests
             Assert.IsNotNull(mock.Object.getRoomTemperature("Bathroom"));
             mock.Verify(m => m.getRoomTemperature("Bathroom"));
         }
+        [TestMethod]
+        public void RoomCreatedTest()
+        {
+            AProcessTemperature process = AProcessTemperature.createProcessTemperature();
+            process.addRoom("Room1");
+            double temperature = process.getRoomTemperature("Room1");
+            Assert.IsNotNull(temperature);
+        }
+
+        [TestMethod]
+        public void RoomCreatedTest2()
+        {
+            AProcessTemperature process = AProcessTemperature.createProcessTemperature();
+            process.addRoom("Room1");
+            double temperature = process.getRoomTemperature("Room2");
+            Assert.AreEqual(0, temperature);
+        }
+
+
     }
 }

@@ -69,9 +69,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Logic\Logic.csproj">
+    <ProjectReference Include="..\Logic\KlientLogic.csproj">
       <Project>{23241070-CB5D-4244-862A-DBAACCCB74CE}</Project>
-      <Name>Logic</Name>
+      <Name>KlientLogic</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

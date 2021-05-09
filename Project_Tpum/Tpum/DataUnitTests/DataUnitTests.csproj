@@ -69,9 +69,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Data\Data.csproj">
+    <ProjectReference Include="..\Data\SerwerData.csproj">
       <Project>{A3CE7022-DD93-4782-8CDC-7162EA2200B6}</Project>
-      <Name>Data</Name>
+      <Name>SerwerData</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

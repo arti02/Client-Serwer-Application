@@ -4,11 +4,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prezentacja", "Prezentacja\Prezentacja.csproj", "{E4D6084D-4E96-4E74-9142-1DC8155CB61E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{042B936B-554A-46C3-9596-9D9D3D5BB218} = {042B936B-554A-46C3-9596-9D9D3D5BB218}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerwerData", "Data\SerwerData.csproj", "{A3CE7022-DD93-4782-8CDC-7162EA2200B6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KlientLogic", "Logic\KlientLogic.csproj", "{23241070-CB5D-4244-862A-DBAACCCB74CE}"
 	ProjectSection(ProjectDependencies) = postProject
+		{A3CE7022-DD93-4782-8CDC-7162EA2200B6} = {A3CE7022-DD93-4782-8CDC-7162EA2200B6}
 		{042B936B-554A-46C3-9596-9D9D3D5BB218} = {042B936B-554A-46C3-9596-9D9D3D5BB218}
 	EndProjectSection
 EndProject
@@ -24,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientData", "ClientData\Cl
 	ProjectSection(ProjectDependencies) = postProject
 		{6EBEA023-E966-4B62-87D6-64FC2643F111} = {6EBEA023-E966-4B62-87D6-64FC2643F111}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerwerDataUnitTests", "SerwerDataUnitTests\SerwerDataUnitTests.csproj", "{4451FE05-2D52-4E94-BC84-F6FAD9560285}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +69,10 @@ Global
 		{042B936B-554A-46C3-9596-9D9D3D5BB218}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{042B936B-554A-46C3-9596-9D9D3D5BB218}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{042B936B-554A-46C3-9596-9D9D3D5BB218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4451FE05-2D52-4E94-BC84-F6FAD9560285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4451FE05-2D52-4E94-BC84-F6FAD9560285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4451FE05-2D52-4E94-BC84-F6FAD9560285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4451FE05-2D52-4E94-BC84-F6FAD9560285}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

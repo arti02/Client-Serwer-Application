@@ -57,15 +57,15 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModel\RelayCommand.cs" />
-    <Compile Include="ViewModel\TemperatureViewModel.cs" />
-    <Compile Include="View\TemperatureWindow.xaml.cs">
-      <DependentUpon>TemperatureWindow.xaml</DependentUpon>
+    <Compile Include="ViewModel\ViewModel.cs" />
+    <Compile Include="View\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\TemperatureWindow.xaml">
+    <Page Include="View\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -98,8 +98,8 @@
     <None Include="View\App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Logic\KlientLogic.csproj">
-      <Project>{23241070-CB5D-4244-862A-DBAACCCB74CE}</Project>
+    <ProjectReference Include="..\KlientLogic\KlientLogic.csproj">
+      <Project>{F7BFFEFF-BF46-49EA-90A5-9EA6864B227C}</Project>
       <Name>KlientLogic</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,35 +1,29 @@
 ﻿
 
 
-using Logic;
+using KlientLogic;
+
 
 namespace Prezentacja.Model
 {
-	class TemperaturaModel
+	public class TemperaturaModel
 	{
-		AProcessTemperature processTemperature;
+		IRoomService roomService;
 
 		public TemperaturaModel()
 		{
-			processTemperature = AProcessTemperature.createProcessTemperature();
+			roomService =new RoomService();
 		}
 
-		public void initData()
+		public double getActualTemp()
 		{
-			processTemperature.addRoom("bedroom");
-			processTemperature.addRoom("kitchen");
-			processTemperature.addRoom("livingroom");
+			return roomService.getActualTemp();
 		}
 
-		public double getRoomTemperature(string roomName)
+	
+		public void setGoalTemp(string selectedRoom, double goalTemp)
 		{
-			double actual = processTemperature.getRoomTemperature(roomName);
-			return actual;
-		}
-
-		public void setGoalTemperature(string roomName, double goalTemperature)
-		{
-			processTemperature.setGoalTemp(roomName, goalTemperature);
+			roomService.setGoalTemp(selectedRoom, goalTemp);
 		}
 	}
 }

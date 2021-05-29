@@ -6,9 +6,9 @@ namespace SerwerLogicUnitTest
     [TestClass]
     public class HeatControlTest
     {
-        [TestMethod]
+      /*  [TestMethod]
         public void createHeatControlTest()
         {
-        }
+        }*/
     }
 }

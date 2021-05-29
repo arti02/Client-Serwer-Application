@@ -70,10 +70,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClientData\ClientData.csproj">
-      <Project>{042B936B-554A-46C3-9596-9D9D3D5BB218}</Project>
-      <Name>ClientData</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Data\SerwerData.csproj">
       <Project>{A3CE7022-DD93-4782-8CDC-7162EA2200B6}</Project>
       <Name>SerwerData</Name>

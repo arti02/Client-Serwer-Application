@@ -3,7 +3,7 @@ using System;
 
 namespace SerwerDataUnitTests
 {
-    [TestClass]
+   /* [TestClass]
     public class SensorTest
     {
         double temperature = 27.0;
@@ -13,5 +13,5 @@ namespace SerwerDataUnitTests
         { 
 
         }
-    }
+    }*/
 }

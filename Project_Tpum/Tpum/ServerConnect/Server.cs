@@ -1,4 +1,6 @@
-﻿using SerwerLogic;
+﻿using Newtonsoft.Json;
+using SerwerLogic;
+using SerwerLogic.modelDTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,38 +13,41 @@ namespace ServerConnect
 {
 	class Server
 	{
+		static IRoomService roomService = new RoomService();
 		public class Echo : WebSocketBehavior
 		{
-			private AHeatControl heatControl;
+			protected override void OnMessage(MessageEventArgs e)
+			{
+				Console.WriteLine(e.Data);
+				ServerRequest request = JsonConvert.DeserializeObject<ServerRequest>(e.Data);
 
-			public Echo()
-			{
-				heatControl = AHeatControl.createHeatControl();
-			}
-			protected override  void OnMessage(MessageEventArgs e)
-			{
-				double temp = heatControl.getActualTemperature(Double.Parse(e.Data));
-				Console.WriteLine("Recived message from client " + e.Data);
+				roomService.UpdateRoom(request.RoomName, request.GoalTemp);
+				double temp = roomService.GetRoomTemperature(request.RoomName).Result;
 				Send(temp.ToString());
+			
+
 			}
 		}
-		static async Task Main(string[] args)
-		{
-			await Task.Run(() =>
-			{
-			WebSocketServer wssv = new WebSocketServer("ws://localhost:7890");
-				while (true)
-				{
-				
-					wssv.AddWebSocketService<Echo>("/Echo");
-					wssv.Start();
-				
-				Console.WriteLine("Server started on ws://127.0.0.1:7890");
-					Console.ReadKey();
-					wssv.Stop();
-				}
-			});
 
+
+
+		static void Main(string[] args)
+		{
+			//await Task.Factory.StartNew(() =>
+			//{
+			WebSocketServer wssv = new WebSocketServer("ws://localhost:8890");
+			while (true)
+			{
+				wssv.AddWebSocketService<Echo>("/Echo");
+				wssv.Start();
+				Console.WriteLine("Server started on ws://127.0.0.1:8890");
+
+				Console.ReadKey();
+				wssv.Stop();
+			}
+
+			//});
 		}
+
 	}
 }

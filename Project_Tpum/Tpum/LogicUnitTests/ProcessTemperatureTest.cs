@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Moq;
-using Logic;
+
 
 namespace LogicUnitTests
 {
-    [TestClass()]
+   /* [TestClass()]
     public class ProcessTemperatureTest
     {
         private readonly Mock<AProcessTemperature> _temp_mock = new Mock<AProcessTemperature>();
@@ -37,5 +37,5 @@ namespace LogicUnitTests
         }
 
 
-    }
+    }*/
 }

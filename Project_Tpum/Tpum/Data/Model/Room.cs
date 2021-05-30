@@ -18,6 +18,13 @@ namespace SerwerData.Model
 			this.Actual = generateActualTemp();
 			this.Goal = 0;
 		}
+		public Room(int id, string name,double actual)
+		{
+			this.Id = id;
+			this.Name = name;
+			this.Actual =actual;
+			this.Goal = 0;
+		}
 
 		private static Random rnd = new Random();
 		private static double generateActualTemp()

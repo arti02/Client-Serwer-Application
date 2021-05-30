@@ -7,9 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prezentacja", "Prezentacja\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerwerData", "Data\SerwerData.csproj", "{A3CE7022-DD93-4782-8CDC-7162EA2200B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataUnitTests", "DataUnitTests\DataUnitTests.csproj", "{A1925FA4-933E-4983-96AD-2F41FDEF091A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicUnitTests", "LogicUnitTests\LogicUnitTests.csproj", "{71B201A8-8C11-4E02-A6FE-E8FD7B26A296}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlientLogicUnitTests", "LogicUnitTests\KlientLogicUnitTests.csproj", "{71B201A8-8C11-4E02-A6FE-E8FD7B26A296}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F7BFFEFF-BF46-49EA-90A5-9EA6864B227C} = {F7BFFEFF-BF46-49EA-90A5-9EA6864B227C}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerwerLogic", "SerwerLogic\SerwerLogic.csproj", "{D6D1C010-DFBA-4613-ADA7-2FCA0A08447A}"
 EndProject
@@ -39,10 +40,6 @@ Global
 		{A3CE7022-DD93-4782-8CDC-7162EA2200B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3CE7022-DD93-4782-8CDC-7162EA2200B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3CE7022-DD93-4782-8CDC-7162EA2200B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A1925FA4-933E-4983-96AD-2F41FDEF091A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1925FA4-933E-4983-96AD-2F41FDEF091A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A1925FA4-933E-4983-96AD-2F41FDEF091A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A1925FA4-933E-4983-96AD-2F41FDEF091A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{71B201A8-8C11-4E02-A6FE-E8FD7B26A296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{71B201A8-8C11-4E02-A6FE-E8FD7B26A296}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71B201A8-8C11-4E02-A6FE-E8FD7B26A296}.Release|Any CPU.ActiveCfg = Release|Any CPU

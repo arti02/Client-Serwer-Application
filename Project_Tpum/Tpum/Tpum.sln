@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlientData", "KlientData\Kl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlientLogic", "KlientLogic\KlientLogic.csproj", "{F7BFFEFF-BF46-49EA-90A5-9EA6864B227C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlientDataUnitTest", "KlientDataUnitTest\KlientDataUnitTest.csproj", "{9585B20D-7D5A-4D99-BAA2-202408315262}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{F7BFFEFF-BF46-49EA-90A5-9EA6864B227C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7BFFEFF-BF46-49EA-90A5-9EA6864B227C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7BFFEFF-BF46-49EA-90A5-9EA6864B227C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9585B20D-7D5A-4D99-BAA2-202408315262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9585B20D-7D5A-4D99-BAA2-202408315262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9585B20D-7D5A-4D99-BAA2-202408315262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9585B20D-7D5A-4D99-BAA2-202408315262}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

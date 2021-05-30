@@ -4,11 +4,13 @@ using System;
 namespace SerwerLogicUnitTest
 {
     [TestClass]
-    public class HeatControlTest
+    public class RoomServiceTest
     {
-      /*  [TestMethod]
-        public void createHeatControlTest()
+        /*
+        [TestMethod]
+        public void getRoomByNameTest()
         {
+            var tRoom = 
         }*/
     }
 }

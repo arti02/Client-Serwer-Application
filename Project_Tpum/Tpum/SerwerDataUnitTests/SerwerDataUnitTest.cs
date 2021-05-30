@@ -3,15 +3,13 @@ using System;
 
 namespace SerwerDataUnitTests
 {
-   /* [TestClass]
-    public class SensorTest
+    [TestClass]
+    public class RoomRepositoryTest
     {
-        double temperature = 27.0;
-
         [TestMethod]
         public void getActualTemperatureTest()
         { 
 
         }
-    }*/
+    }
 }

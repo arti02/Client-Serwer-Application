@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?><UANodeSet xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <NamespaceUris>
+        <Uri>TemperatureHandler</Uri>
+    </NamespaceUris>
+    <UAVariable AccessLevel="1" BrowseName="1:GoalTemperature_DTO" DataType="i=24" Historizing="0" MinimumSamplingInterval="0.000000" NodeId="ns=1;s=GoalTemperature_DTO" ValueRank="-2" WriteMask="0">
+        <DisplayName>GoalTemperature_DTO</DisplayName>
+        <References>
+            <Reference IsForward="false" ReferenceType="i=47">ns=1;s=RoomDTO</Reference>
+            <Reference IsForward="true" ReferenceType="i=40">i=63</Reference>
+        </References>
+        <Value>
+            <String>Numeric</String>
+        </Value>
+    </UAVariable>
+    <UAVariable AccessLevel="1" BrowseName="1:RoomName" DataType="i=24" Historizing="0" MinimumSamplingInterval="0.000000" NodeId="ns=1;s=RoomName" ValueRank="-2" WriteMask="0">
+        <DisplayName>RoomName</DisplayName>
+        <References>
+            <Reference IsForward="false" ReferenceType="i=46">ns=1;s=ServerRequest</Reference>
+            <Reference IsForward="true" ReferenceType="i=40">i=68</Reference>
+        </References>
+        <Value>
+            <String>String</String>
+        </Value>
+    </UAVariable>
+    <UAVariable AccessLevel="1" BrowseName="1:GoalTemp" DataType="i=24" Historizing="0" MinimumSamplingInterval="0.000000" NodeId="ns=1;s=GoalTemp" ValueRank="-2" WriteMask="0">
+        <DisplayName>GoalTemp</DisplayName>
+        <References>
+            <Reference IsForward="false" ReferenceType="i=46">ns=1;s=ServerRequest</Reference>
+            <Reference IsForward="true" ReferenceType="i=40">i=68</Reference>
+        </References>
+        <Value>
+            <String>Numeric</String>
+        </Value>
+    </UAVariable>
+    <UAObjectType BrowseName="1:RoomDTO" IsAbstract="false" NodeId="ns=1;s=RoomDTO" WriteMask="0">
+        <DisplayName>RoomDTO</DisplayName>
+        <References>
+            <Reference IsForward="true" ReferenceType="i=47">ns=1;s=GoalTemperature_DTO</Reference>
+            <Reference IsForward="false" ReferenceType="i=45">i=58</Reference>
+            <Reference IsForward="true" ReferenceType="i=47">ns=1;s=ID_DTO</Reference>
+            <Reference IsForward="true" ReferenceType="i=47">ns=1;s=ActualTemperature_DTO</Reference>
+            <Reference IsForward="true" ReferenceType="i=47">ns=1;s=RoomName_DTO</Reference>
+        </References>
+    </UAObjectType>
+    <UAVariable AccessLevel="1" BrowseName="1:ID_DTO" DataType="i=24" Historizing="0" MinimumSamplingInterval="0.000000" NodeId="ns=1;s=ID_DTO" ValueRank="-2" WriteMask="0">
+        <DisplayName>ID_DTO</DisplayName>
+        <References>
+            <Reference IsForward="false" ReferenceType="i=47">ns=1;s=RoomDTO</Reference>
+            <Reference IsForward="true" ReferenceType="i=40">i=63</Reference>
+        </References>
+        <Value>
+            <String>Numeric</String>
+        </Value>
+    </UAVariable>
+    <UAObjectType BrowseName="1:ServerRequest" IsAbstract="false" NodeId="ns=1;s=ServerRequest" WriteMask="0">
+        <DisplayName>ServerRequest</DisplayName>
+        <References>
+            <Reference IsForward="true" ReferenceType="i=46">ns=1;s=RoomName</Reference>
+            <Reference IsForward="true" ReferenceType="i=46">ns=1;s=GoalTemp</Reference>
+            <Reference IsForward="false" ReferenceType="i=45">i=58</Reference>
+        </References>
+    </UAObjectType>
+    <UAVariable AccessLevel="1" BrowseName="1:Name-210620154030-14" DataType="i=24" Historizing="0" MinimumSamplingInterval="0.000000" NodeId="ns=1;s=RoomName_DTO" ValueRank="-2" WriteMask="0">
+        <DisplayName>Name-210620154030-14</DisplayName>
+        <References>
+            <Reference IsForward="false" ReferenceType="i=47">ns=1;s=RoomDTO</Reference>
+            <Reference IsForward="true" ReferenceType="i=40">i=63</Reference>
+        </References>
+        <Value>
+            <String>String</String>
+        </Value>
+    </UAVariable>
+    <UAVariable AccessLevel="1" BrowseName="1:ActualTemperature_DTO" DataType="i=24" Historizing="0" MinimumSamplingInterval="0.000000" NodeId="ns=1;s=ActualTemperature_DTO" ValueRank="-2" WriteMask="0">
+        <DisplayName>ActualTemperature_DTO</DisplayName>
+        <References>
+            <Reference IsForward="false" ReferenceType="i=47">ns=1;s=RoomDTO</Reference>
+            <Reference IsForward="true" ReferenceType="i=40">i=63</Reference>
+        </References>
+        <Value>
+            <String>Numeric</String>
+        </Value>
+    </UAVariable>
+</UANodeSet>
